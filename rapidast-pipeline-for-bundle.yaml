@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: rapidast-pipeline
+spec:
+  tasks:
+    - name: rapidast-scan
+      taskRef:
+        name: rapidast
+        bundle: quay.io/jechoi/bundle:rapidast

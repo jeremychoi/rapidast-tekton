@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: rapidast
+spec:
+  steps:
+    - name: scan
+      image: quay.io/jechoi/demo-rhtap-rapidast
+      script: |
+        #!/bin/sh
+        rapidast.py --config /home/rapidast/v4-rapidast-config.yaml
+        cat results/MyApp-1.0/*/zap/zap-report.json
