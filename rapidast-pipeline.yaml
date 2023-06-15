@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: rapidast-pipeline
+spec:
+  tasks:
+    - name: rapidast-scan
+      taskRef:
+        resolver: git
+        params:
+		- name: url
+		  value: https://github.com/jeremychoi/rapidast-tekton.git
+		- name: revision
+		  value: main
+		- name: pathInRepo
+		  value: rapidast-task-for-tkn-bundle.yaml
