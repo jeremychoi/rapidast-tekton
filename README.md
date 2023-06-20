@@ -9,9 +9,8 @@ See `rapidast-pipeline-git-resolver.yaml`
 
 ## Run RapiDAST task with a Tekton bundle
 
-a Tekton bundle of RapiDAST task can be created as follow:
+A Tekton bundle with RapiDAST task can be created as follow:
 
-task
 ```
 $ tkn bundle push quay.io/jechoi/bundle:rapidast -f rapidast-task.yaml
 ```
