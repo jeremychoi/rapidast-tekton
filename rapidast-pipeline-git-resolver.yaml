@@ -13,4 +13,4 @@ spec:
         - name: revision
           value: main
         - name: pathInRepo
-          value: rapidast-task-for-tkn-bundle.yaml
+          value: rapidast-task.yaml

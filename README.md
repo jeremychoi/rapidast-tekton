@@ -1,13 +1,19 @@
 # rapidast-tekton
 
-## Create a Tekton bundle
+Examples of DAST scanning (via [RapiDAST](https://github.com/RedHatProductSecurity/rapidast)) using Tekton pipeline and task. 
+This can also help Red Hat Trusted Application Pipeline (RHTAP) provide DAST scanning to its users' applications.
+
+## Run RapiDAST task with git resolver
+
+See `rapidast-pipeline-git-resolver.yaml`
+
+## Run RapiDAST task with a Tekton bundle
+
+a Tekton bundle of RapiDAST task can be created as follow:
 
 task
 ```
-$ tkn bundle push quay.io/jechoi/bundle:rapidast -f rapidast-task-for-tkn-bundle.yaml
+$ tkn bundle push quay.io/jechoi/bundle:rapidast -f rapidast-task.yaml
 ```
 
-pipeline
-```
-$ tkn bundle push quay.io/jechoi/bundle:rapidast-pipeline -f rapidast-pipeline.yaml
-```
+See `rapidast-pipeline-for-bundle.yaml` to refer to the task.
